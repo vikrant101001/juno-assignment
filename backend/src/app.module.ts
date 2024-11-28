@@ -13,7 +13,8 @@ import { TasksModule } from './tasks/tasks.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: [`.env.stage.dev`],
+      // Load .env.stage.dev for local development but use process.env on Render
+      envFilePath: process.env.NODE_ENV === 'production' ? undefined : `.env.stage.dev`,
       validationSchema: configValidationSchema,
     }),
     TasksModule,
