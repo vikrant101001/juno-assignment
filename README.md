@@ -10,6 +10,7 @@ This is a full-stack app with a backend (PostgreSQL) and frontend. The backend u
 ## 1. Clone the Repo
 
 git clone https://github.com/your-username/juno-assignment.git
+
 cd juno-assignment
 
 ## 2. Backend Setup
