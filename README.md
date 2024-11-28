@@ -30,14 +30,14 @@ Create .env.stage.dev in backend/:
 env
 
 
-STAGE=1
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=postgres
-DB_PASSWORD=postgres
-DB_DATABASE=task-management
-JWT_SECRET=secret
-ADMIN_PASSWORD=Admin10$$
+STAGE=
+DB_HOST=
+DB_PORT=
+DB_USERNAME=
+DB_PASSWORD=
+DB_DATABASE=
+JWT_SECRET=
+ADMIN_PASSWORD=
 
 ### 2.3 Run Docker
 
