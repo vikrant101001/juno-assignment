@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  # tasks:
+  #   build: .
+  #   ports:
+  #     - '3000:3000'
+  #   environment:
+  #     - STAGE=dev
+  #   env_file:
+  #     - .env.stage.dev
+  postgres:
+    image: postgres
+    restart: unless-stopped
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    hostname: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: task-management
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    volumes:
+      - pgadmin4:/var/lib/pgadmin
+    ports:
+      - '3001:3001' # pgadmin default run on port 80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: user@domain.com
+      PGADMIN_DEFAULT_PASSWORD: secret
+      PGADMIN_LISTEN_PORT: 3001 # pgadmin default run on port 80
+volumes:
+  postgres:
+  pgadmin4:
