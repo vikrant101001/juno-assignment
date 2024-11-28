@@ -1,4 +1,4 @@
-# Juno Assignment - Full Stack App
+# Juno Assignment - Task Management with NestJS + ReactJS
 
 This is a full-stack app with a backend (PostgreSQL) and frontend. The backend uses Docker for PostgreSQL.
 
