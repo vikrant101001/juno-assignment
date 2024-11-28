@@ -12,13 +12,14 @@ This is a full-stack app with a backend (PostgreSQL) and frontend. The backend u
 git clone https://github.com/your-username/juno-assignment.git
 cd juno-assignment
 
-##2. Backend Setup
-2.1 Install Dependencies
+## 2. Backend Setup
+### 2.1 Install Dependencies
 bash
 Copy code
 cd backend
 yarn install
-2.2 Configure .env.stage.dev
+
+### 2.2 Configure .env.stage.dev
 Create .env.stage.dev in backend/:
 
 env
@@ -31,35 +32,39 @@ DB_PASSWORD=postgres
 DB_DATABASE=task-management
 JWT_SECRET=secret
 ADMIN_PASSWORD=Admin10$$
-2.3 Run Docker
+
+### 2.3 Run Docker
 bash
 Copy code
 docker-compose up -d
-2.4 Start Backend Server
+
+
+### 2.4 Start Backend Server
 bash
 Copy code
 yarn start
 Backend runs at http://localhost:3000.
 
-##3. Frontend Setup
-3.1 Install Dependencies
+## 3. Frontend Setup
+### 3.1 Install Dependencies
 bash
 Copy code
 cd frontend
 npm install
-3.2 Configure .env
+
+### 3.2 Configure .env
 Create .env in frontend/:
 
 env
 Copy code
 VITE_API_URL=http://localhost:3000
-3.3 Start Frontend Server
+### 3.3 Start Frontend Server
 bash
 Copy code
 npm run dev
 Frontend runs at http://localhost:5173.
 
-#34. Database Setup with Docker
+## 4. Database Setup with Docker
 Run Docker containers:
 
 bash
