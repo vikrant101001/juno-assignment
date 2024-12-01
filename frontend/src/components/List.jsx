@@ -44,7 +44,7 @@ const List = ({ showCreate, setShowCreate }) => {
   // Handle Update status
   const handleUpdate = async (id, newStatus) => {
     try {
-      const response = await axios.patch(`${import.meta.env.VITE_API_URL}/${id}/status`, {
+      const response = await axios.patch(`${import.meta.env.VITE_API_URL}/tasks/${id}/status`, {
         status: newStatus,
       }, axiosConfig);
       if (response.status === 200) {
